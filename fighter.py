@@ -73,15 +73,15 @@ def hitStatus(fighter, hit, fortune):
         return 0
 
     if fortune < 5:
-        print('Боец ' + str(fighter) +': неудачный удар')
+        print('Боец ' + str(fighter) + ': неудачный удар')
         return 0
 
     if 5 <= fortune <= 8:
         if hit == 1:
-            print('Боец ' + str(fighter) +': удар левой рукой')
+            print('Боец ' + str(fighter) + ': удар левой рукой')
             return 1
         if hit == 2:
-            print('Боец ' + str(fighter) +': удар правой рукой')
+            print('Боец ' + str(fighter) + ': удар правой рукой')
             return 2
         if hit == 3:
             print('Боец ' + str(fighter) + ': неудачный удар')
@@ -96,15 +96,15 @@ def hitStatus(fighter, hit, fortune):
             return 1
         if hit == 2:
             if fortune == 12:
-                print('Боец ' + str(fighter) +': критический удар правой рукой')
+                print('Боец ' + str(fighter) + ': критический удар правой рукой')
                 return 3
             print('Боец ' + str(fighter) + ': удар правой рукой')
             return 2
         if hit == 3:
             if fortune == 12:
-                print('Боец ' + str(fighter) +': критический ногой')
+                print('Боец ' + str(fighter) + ': критический удар ногой')
                 return 4
-            print('Боец ' + str(fighter) +': удар ногой')
+            print('Боец ' + str(fighter) + ': удар ногой')
             return 3
 
 
@@ -143,7 +143,7 @@ def main():
     print('[4] - поставить блок')
 
     while True:
-        for i in range(1,3):
+        for i in range(1, 3):
             h = hit(i)
             f = fortune(i)
             if i == 1:
@@ -159,7 +159,7 @@ def main():
         if isBlock(hit1, fortune1, hit2, fortune2):
             continue
 
-        for n in range(1,3):
+        for n in range(1, 3):
             if n == 1:
                 damage = int(hitStatus(n, hit1, fortune1))
                 health2 -= damage
